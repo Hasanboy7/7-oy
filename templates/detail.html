@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="mb-3 text-center">{{person.first_name}} {{person.last_name}}</h1>
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <img src="{{person.img.url}}" alt="" style="width: 400px; height: 75vh;">
+            <div>
+                <p style="float: right;">{{person.body|slice:1000}}</p>
+                 <div>
+                    <span>
+                        <span style="font-weight: 900;">email:</span>
+                        <i>{{person.email}}</i>
+                    </span>
+                    <span style="margin-left: 100px;">
+                        <span style="font-weight: 900;">phone:</span>
+                        <i>{{person.phone}}</i>
+                    </span>
+                </div>
+                <div style=" margin-top:20px;">
+                    <span>
+                        <span style="font-weight: 900;">location:</span>
+                        <i>{{person.location}}</i>
+                    </span>
+                    <span style="margin-left: 233px;">
+                        <span style="font-weight: 900;">hobiy:</span>
+                        <i>{{person.hobiy}}</i>
+                    </span>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+{% endblock  %}

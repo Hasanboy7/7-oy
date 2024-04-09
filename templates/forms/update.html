@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Update{% endblock title %}
+{% block content %}
+        <div class="container p-3">
+            <h2 class='text-center'>Foydalanuvchi O'zgartirish</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{forms|crispy}}
+                <button class="btn btn-primary w-100 fs-5">Submit</button>
+            </form>
+        </div>
+{% endblock  %}
+    
